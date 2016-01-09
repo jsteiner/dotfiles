@@ -50,7 +50,7 @@ bind Down resize-pane -D 4
 # status bar
 set -g status-bg colour2
 set -g status-fg colour8
-set -g status-left ' #S'
+set -g status-left ' #S '
 set -g status-right '#(~/.bin/battery) %-I:%M '
 
 # highlight current window
