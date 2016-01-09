@@ -1,2 +1,7 @@
 Plug 'skwp/vim-colors-solarized'
 Plug 'pbrisbin/vim-rename-file'
+Plug 'epmatsw/ag.vim'
+
+" Syntax
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-markdown'

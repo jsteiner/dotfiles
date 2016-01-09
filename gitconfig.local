@@ -9,3 +9,9 @@
 [url "git@github.com:jsteiner/"]
   # moi, with write access
   insteadOf = jsteiner:
+[alias]
+  co = checkout
+  # Full commit messages without all the junk from `log --pretty=full`
+  full = log -1 --pretty='%C(red)%H%nAuthor: %C(green)%an%n%C(magenta)%s%n%b'
+[format]
+  pretty = format:%C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an, %cr]%Creset
