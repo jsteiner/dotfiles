@@ -1,0 +1,26 @@
+# Alias Editing
+alias ae='vi ~/.aliases.local'
+alias ar='source ~/.aliases.local'
+alias zr='source ~/.zshrc'
+
+# git
+alias amend='git commit --amend'
+alias amendne='git commit --amend --no-edit'
+alias ga="git add"
+alias gall='git add -A'
+alias gb='git branch'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gd='git diff'
+alias gf='git fetch'
+alias gl='git log -10'
+alias gmb='git checkout master && git merge @{-1}'
+alias gnb='git checkout -b'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias gri='git rebase -i'
+alias grn='git branch -m $(git rev-parse --abbrev-ref HEAD)'
+alias gs='git status -s'
+alias gup='git fetch origin && git rebase origin/master'

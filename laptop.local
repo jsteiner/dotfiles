@@ -1,0 +1,9 @@
+#!/bin/sh
+
+brew install Caskroom/cask/dockertoolbox
+brew install ngrok
+brew install parity
+brew install shellcheck
+brew install watch
+brew install zsh-syntax-highlighting
+brew install fasd

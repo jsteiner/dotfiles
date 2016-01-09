@@ -1,0 +1,85 @@
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+set -s escape-time 0
+
+# Smart pane switching with awareness of vim splits
+bind -n C-h run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys C-h) || tmux select-pane -L"
+bind -n C-j run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys C-j) || tmux select-pane -D"
+bind -n C-k run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys C-k) || tmux select-pane -U"
+bind -n C-l run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys C-l) || tmux select-pane -R"
+bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys 'C-\\') || tmux select-pane -l"
+
+# look good
+set -g default-terminal "screen-256color"
+
+# act like GNU screen
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+# reload configs
+unbind r
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+# 25% horizontal split
+unbind ^T
+bind ^T split-window -p 25 -c '#{pane_current_path}'
+
+# 30% vertical split
+unbind ^U
+bind ^U split-window -h -p 30 -c '#{pane_current_path}'
+
+# Open a new pane in the current path
+unbind c
+bind c new-window -c '#{pane_current_path}'
+
+# horizontal and vertical splits
+unbind |
+bind | split-window -h -c '#{pane_current_path}'
+unbind _
+bind _ split-window -v -c '#{pane_current_path}'
+
+unbind Right
+bind Right resize-pane -R 8
+unbind Left
+bind Left resize-pane -L 8
+unbind Up
+bind Up resize-pane -U 4
+unbind Down
+bind Down resize-pane -D 4
+
+# status bar
+set -g status-bg colour2
+set -g status-fg colour8
+set -g status-left ' #S'
+set -g status-right '#(~/.bin/battery) %-I:%M '
+
+# highlight current window
+setw -g window-status-current-bg colour4
+setw -g window-status-current-fg default
+
+# break and restore panes
+unbind +
+bind + resize-pane -Z
+
+# clear the screen
+bind C-c send-keys 'C-l'
+
+# Break out, join, and send  panes
+bind-key b break-pane -t :
+bind-key m command-prompt -p "merge pane from:"  "join-pane -s '%%'"
+
+# Copy to pbcopy buffer and use 'v' to begin selection
+bind-key -t vi-copy v begin-selection
+unbind -t vi-copy Enter
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+
+# Start windows and panes at 1, not 0
+set -g base-index 1
+set -g pane-base-index 1
+
+# Move window right and left
+unbind o
+bind o swap-window -t -1
+unbind p
+bind p swap-window -t +1

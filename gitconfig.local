@@ -1,0 +1,11 @@
+[user]
+  name = Josh Steiner
+  email = josh@jsteiner.me
+[github]
+  user = jsteiner
+[url "git@github.com:thoughtbot/"]
+  # thoughtbot, with write access
+  insteadOf = tb:
+[url "git@github.com:jsteiner/"]
+  # moi, with write access
+  insteadOf = jsteiner:
