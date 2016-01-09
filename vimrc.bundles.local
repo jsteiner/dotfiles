@@ -1,1 +1,2 @@
 Plug 'skwp/vim-colors-solarized'
+Plug 'pbrisbin/vim-rename-file'
