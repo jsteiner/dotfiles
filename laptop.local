@@ -7,3 +7,5 @@ brew install shellcheck
 brew install watch
 brew install zsh-syntax-highlighting
 brew install fasd
+brew install wget
+brew install tree
