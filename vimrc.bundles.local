@@ -3,6 +3,13 @@ Plug 'pbrisbin/vim-rename-file'
 Plug 'epmatsw/ag.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
-" Syntax
+" Haskell
+Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'Twinside/vim-hoogle'
+
+" Elixir
 Plug 'elixir-lang/vim-elixir'
+
+" Markdown
 Plug 'tpope/vim-markdown'
