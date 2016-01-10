@@ -1,6 +1,7 @@
 Plug 'skwp/vim-colors-solarized'
 Plug 'pbrisbin/vim-rename-file'
 Plug 'epmatsw/ag.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Syntax
 Plug 'elixir-lang/vim-elixir'
