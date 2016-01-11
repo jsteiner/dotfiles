@@ -2,6 +2,7 @@ Plug 'skwp/vim-colors-solarized'
 Plug 'pbrisbin/vim-rename-file'
 Plug 'epmatsw/ag.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'bogado/file-line'
 
 " Haskell
 Plug 'pbrisbin/vim-syntax-shakespeare'
