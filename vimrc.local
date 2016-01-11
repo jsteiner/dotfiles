@@ -37,6 +37,25 @@ map <leader>i mmgg=G`m<cr>
 nmap <leader>rh :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
 
 
+
+" Visual
+""""""""
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+set shiftround    " When at 3 spaces and I hit >>, go to 4, not 5.
+
+" Open new splits the the right and bottom. More natural than the default
+set splitbelow
+set splitright
+
+" Scrolling
+set scrolloff=8   "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+
 " Other
 """""""
 
