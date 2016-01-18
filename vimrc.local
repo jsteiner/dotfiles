@@ -55,5 +55,7 @@ set sidescroll=1
 " Other
 """""""
 
+set visualbell " No sounds
+
 " delete ruby comments
 nmap <leader>c :%s/^\s*#.*$//g<CR>:%s/\(\n\)\n\+/\1/g<CR>:nohl<CR>gg
