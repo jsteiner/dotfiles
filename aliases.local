@@ -3,8 +3,6 @@ alias ae='vi ~/.aliases.local'
 alias ar='source ~/.aliases.local'
 alias zr='source ~/.zshrc'
 
-alias vim='nvim'
-
 # git
 alias amend='git commit --amend'
 alias amendne='git commit --amend --no-edit'
