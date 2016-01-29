@@ -4,9 +4,10 @@ alias ar='source ~/.aliases.local'
 alias zr='source ~/.zshrc'
 
 # git
+alias git='hub'
 alias amend='git commit --amend'
 alias amendne='git commit --amend --no-edit'
-alias ga="git add"
+alias ga='git add'
 alias gall='git add -A'
 alias gb='git branch'
 alias gc='git commit'
