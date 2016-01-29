@@ -73,8 +73,8 @@ else
       tb:*)
         directory="${git_url#tb:}"
         ;;
-      gbw:*)
-        directory="${git_url#gbw:}"
+      js:*)
+        directory="${git_url#js:}"
         ;;
       *)
         directory="${$(basename "$git_url")%.git}"

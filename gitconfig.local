@@ -8,7 +8,7 @@
   insteadOf = tb:
 [url "git@github.com:jsteiner/"]
   # moi, with write access
-  insteadOf = jsteiner:
+  insteadOf = js:
 [alias]
   co = checkout
   # Full commit messages without all the junk from `log --pretty=full`
