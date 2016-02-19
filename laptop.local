@@ -10,3 +10,10 @@ brew install zsh-history-substring-search
 brew install fasd
 brew install wget
 brew install tree
+
+# Quicklook plugins https://github.com/sindresorhus/quick-look-plugins
+brew cask install qlmarkdown # quick look for markdown
+brew cask install quicklook-json # quick look for json
+brew cask install betterzipql # peek inside zip files
+brew cask install qlstephen # quick look plain text files with no extension
+brew cask install qlcolorcode # syntax highlight code
