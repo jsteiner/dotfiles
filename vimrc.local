@@ -4,6 +4,10 @@ command! W w
 " Bind :Q to :q
 command! Q q
 
+" Clipboard
+"""""""""""
+set clipboard=unnamed " use system clipboard
+
 
 " Movement
 """"""""""
