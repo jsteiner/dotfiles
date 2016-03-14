@@ -16,18 +16,6 @@ set clipboard=unnamed " use system clipboard
 nmap j gj
 nmap k gk
 
-
-" File Handling
-"""""""""""""""
-
-" Edit another file in the same directory as the current file
-" uses expression to extract path from current file's path
-map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
-map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
-map <Leader>v :vsplit <C-R>=expand("%:p:h") . '/'<CR>
-map <Leader>te :tabe <C-R>=expand("%:p:h") . '/'<CR>
-
-
 " Formatting
 """"""""""""
 
@@ -63,3 +51,11 @@ set visualbell " No sounds
 
 " delete ruby comments
 nmap <leader>c :%s/^\s*#.*$//g<CR>:%s/\(\n\)\n\+/\1/g<CR>:nohl<CR>gg
+
+" Like bufdo but restore the current buffer.
+function! BufDo(command)
+  let currBuff=bufnr("%")
+  execute 'bufdo ' . a:command
+  execute 'buffer ' . currBuff
+endfunction
+com! -nargs=+ -complete=command Bufdo call BufDo(<q-args>)
