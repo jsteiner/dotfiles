@@ -3,6 +3,7 @@ Plug 'pbrisbin/vim-rename-file'
 Plug 'epmatsw/ag.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bogado/file-line'
+Plug 'jgdavey/tslime.vim'
 
 " Haskell
 Plug 'pbrisbin/vim-syntax-shakespeare'
