@@ -16,6 +16,16 @@ set clipboard=unnamed " use system clipboard
 nmap j gj
 nmap k gk
 
+" File Handling
+"""""""""""""""
+
+" Edit another file in the same directory as the current file
+" uses expression to extract path from current file's path
+map <Leader>oe :e <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>os :split <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>ov :vsplit <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>ot :tabe <C-R>=expand("%:p:h") . '/'<CR>
+
 " Formatting
 """"""""""""
 
