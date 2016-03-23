@@ -71,3 +71,6 @@ endfunction
 com! -nargs=+ -complete=command Bufdo call BufDo(<q-args>)
 
 let test#strategy = "tslime"
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
+map <leader>tv <Plug>SetTmuxVars
