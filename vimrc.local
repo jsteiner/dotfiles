@@ -4,6 +4,8 @@ command! W w
 " Bind :Q to :q
 command! Q q
 
+set relativenumber
+
 " Clipboard
 """""""""""
 set clipboard=unnamed " use system clipboard
@@ -33,7 +35,6 @@ map <Leader>ot :tabe <C-R>=expand("%:p:h") . '/'<CR>
 map <leader>i mmgg=G`m<cr>
 " Rehash with 1.9 style hash syntax
 nmap <leader>rh :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
-
 
 
 " Visual
