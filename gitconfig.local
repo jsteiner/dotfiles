@@ -15,5 +15,6 @@
   full = log -1 --pretty='%C(red)%H%nAuthor: %C(green)%an%n%C(magenta)%s%n%b'
   fixup = commit --fixup
   squash = commit --squash
+  conflicts = "!vim $(git diff --name-only --diff-filter=U)"
 [format]
   pretty = format:%C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an, %cr]%Creset
