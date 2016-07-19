@@ -9,11 +9,11 @@ I use [thoughtbot/dotfiles] as the foundation of my dotfiles. These files are th
 
 Clone thoughtbot's dotfiles:
 
-    git clone git://github.com/thoughtbot/dotfiles.git
+    git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles-thoughtbot
 
 Then clone mine:
 
-    git clone git://github.com/jsteiner/dotfiles.git ~/dotfiles-local
+    git clone git://github.com/jsteiner/dotfiles.git
 
 Then run `rcup` to link:
 
@@ -26,7 +26,7 @@ You can safely run `rcup` multiple times to update:
 
     rcup
 
-## What's in it
+## Notable features
 
 Everything in [thoughtbot's dotfiles].
 
@@ -46,6 +46,5 @@ zsh configuration:
 
 vim configuration:
 
-Everything in my [vimrc.bundles.local].
-
-[vimrc.bundles.local]: https://github.com/jsteiner/dotfiles-local/blob/master/vimrc.bundles.local
+* The [Solarized](http://ethanschoonover.com/solarized) theme
+* Plugins for better Elixir/Haskell development
