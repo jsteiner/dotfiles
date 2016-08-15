@@ -19,3 +19,5 @@
   show-commit = show -s --format=%B
 [format]
   pretty = format:%C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an, %cr]%Creset
+[diff]
+  compactionHeuristic = true
