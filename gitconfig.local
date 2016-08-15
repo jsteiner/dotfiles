@@ -16,5 +16,6 @@
   fixup = commit --fixup
   squash = commit --squash
   conflicts = "!vim $(git diff --name-only --diff-filter=U)"
+  show-commit = show -s --format=%B
 [format]
   pretty = format:%C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an, %cr]%Creset
