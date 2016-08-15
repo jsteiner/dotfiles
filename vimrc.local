@@ -58,6 +58,9 @@ set sidescroll=1
 " Other
 """""""
 
+" Don't ask me if I want to load changed files. The answer is always 'Yes'
+set autoread
+
 set visualbell " No sounds
 
 " delete ruby comments
