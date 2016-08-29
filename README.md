@@ -13,7 +13,7 @@ Clone thoughtbot's dotfiles:
 
 Then clone mine:
 
-    git clone git://github.com/jsteiner/dotfiles.git
+    git clone git://github.com/jsteiner/dotfiles-local.git ~/dotfiles
 
 Then run `rcup` to link:
 
