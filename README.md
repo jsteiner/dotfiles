@@ -7,14 +7,20 @@ I use [thoughtbot/dotfiles] as the foundation of my dotfiles. These files are th
 
 ## Install
 
+Install and use [iTerm2](http://www.iterm2.com/).
+
 Set zsh as your login shell:
 
     chsh -s $(which zsh)
 
-Install rcm:
+Install [rcm](https://github.com/thoughtbot/rcm) for managing dotfiles:
 
     brew tap thoughtbot/formulae
     brew install rcm
+
+Install other zsh dependencies:
+
+    brew install zsh-syntax-highlighting zsh-history-substring-search
 
 Clone thoughtbot's dotfiles:
 
@@ -34,6 +40,16 @@ thoughtbot's dotfiles and my local customizations.
 You can safely run `rcup` multiple times to update:
 
     rcup
+
+
+Configure iTerm:
+
+* Install the [light] and [dark] Solarized for iTerm2 themes.
+  * Set them in Profiles > Colors > Load Presets
+* Under Profiles > Terminal
+  * Set `Scrollback Lines` to 0 *if* you are using tmux.
+* Under Profiles > Text
+  * Disable `Draw bold text in bright colors`
 
 ## Notable features
 
@@ -57,3 +73,6 @@ vim configuration:
 
 * The [Solarized](http://ethanschoonover.com/solarized) theme
 * Plugins for better Elixir/Haskell development
+
+[dark]: https://raw.githubusercontent.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors
+[light]: https://raw.githubusercontent.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Light.itermcolors
