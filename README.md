@@ -7,13 +7,22 @@ I use [thoughtbot/dotfiles] as the foundation of my dotfiles. These files are th
 
 ## Install
 
+Set zsh as your login shell:
+
+    chsh -s $(which zsh)
+
+Install rcm:
+
+    brew tap thoughtbot/formulae
+    brew install rcm
+
 Clone thoughtbot's dotfiles:
 
     git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles-thoughtbot
 
 Then clone mine:
 
-    git clone git://github.com/jsteiner/dotfiles-local.git ~/dotfiles
+    git clone git://github.com/jsteiner/dotfiles.git ~/dotfiles-jsteiner
 
 Then run `rcup` to link:
 
