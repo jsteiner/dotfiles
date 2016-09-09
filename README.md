@@ -22,6 +22,12 @@ Install other zsh dependencies:
 
     brew install zsh-syntax-highlighting zsh-history-substring-search
 
+Install [the silver searcher](https://github.com/ggreer/the_silver_searcher),
+[tmux](https://tmux.github.io),
+[reattach to user namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard), and [hub](https://github.com/github/hub)
+
+    brew install the_silver_searcher tmux hub
+
 Clone thoughtbot's dotfiles:
 
     git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles-thoughtbot
@@ -32,7 +38,8 @@ Then clone mine:
 
 Then run `rcup` to link:
 
-    env RCRC=$HOME/dotfiles/rcrc rcup
+    env RCRC=$HOME/dotfiles-thoughtbot/rcrc rcup
+    env RCRC=$HOME/dotfiles-jsteiner/rcrc rcup
 
 This will create symlinks for config files in your home directory from
 thoughtbot's dotfiles and my local customizations.
