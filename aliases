@@ -15,5 +15,34 @@ alias s="rspec"
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
+# git
+alias git='hub'
+alias amend='git commit --amend'
+alias amendne='git commit --amend --no-edit'
+alias ga='git add'
+alias gall='git add -A'
+alias gb='git branch'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gd='git fancy-diff'
+alias gf='git fetch'
+alias gl='git log -10'
+alias gmb='git checkout master && git merge @{-1}'
+alias gnb='git checkout -b'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias gri='git rebase -i'
+alias grn='git branch -m $(git rev-parse --abbrev-ref HEAD)'
+alias gs='git status -s'
+alias gup='git fetch origin && git rebase origin/master'
+
+# Other
+
+alias psag="ps aux | ag "
+alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData/'
+alias fupostgres='rm -f /usr/local/var/postgres/postmaster.pid && brew services restart postgres'
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
