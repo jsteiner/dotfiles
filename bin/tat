@@ -1,31 +1,62 @@
-#!/bin/sh
+#!/bin/zsh
+
+### ~*~ tat ~*~ ###
+# Use `tat blog` to connect to the `blog` session, or create a new session
+# named `blog`.
 #
-# Attach or create tmux session named the same as current directory.
+# With no arguments, fuzzy-finds a session in a directory in $JUMP_DIRECTORIES.
 
-path_name="$(basename "$PWD" | tr . -)"
-session_name=${1-$path_name}
-
-not_in_tmux() {
-  [ -z "$TMUX" ]
+_not_in_tmux(){
+  [[ -z "$TMUX" ]]
 }
 
-session_exists() {
-  tmux list-sessions | sed -E 's/:.*$//' | grep -q "^$session_name$"
-}
+# Attach if not in tmux, or switch if we are in tmux
+_attach_to_tmux_session() {
+  session=$1
 
-create_detached_session() {
-  (TMUX='' tmux new-session -Ad -s "$session_name")
-}
-
-create_if_needed_and_attach() {
-  if not_in_tmux; then
-    tmux new-session -As "$session_name"
+  if _not_in_tmux; then
+    tmux attach -d -t "$session"
   else
-    if ! session_exists; then
-      create_detached_session
-    fi
-    tmux switch-client -t "$session_name"
+    tmux switch-client -t "$session"
   fi
 }
 
-create_if_needed_and_attach
+_tmux_session_exists(){
+  tmux list-sessions -F "#{session_name}" | egrep -q "^${1}$"
+}
+
+# tmux doesn't allow . in session names
+_tmux_normalize_session_name(){
+  echo "${1//./-}"
+}
+
+# Create a new tmux session with the given name.
+_new_tmux_session_named() {
+  new_session_name=$(basename $1)
+
+  TMUX='' tmux new-session -d -As "$new_session_name"
+  _attach_to_tmux_session "$new_session_name"
+}
+
+# Try to connect to a tmux session with the given name.
+# If no such session exists, create it first.
+_tmux_try_to_connect_to(){
+  if _tmux_session_exists "$1"; then
+    _attach_to_tmux_session "$1"
+  else
+    _new_tmux_session_named "$1"
+  fi
+}
+
+# Are we currently connected to the given session?
+_connected_to(){
+  current_tmux_session=$(tmux ls -F '#S #{session_attached}' | grep '1$' | cut -d' ' -f1)
+
+  [[ "$1" == "$current_tmux_session" ]]
+}
+
+if (( $# == 1 )); then
+  _tmux_try_to_connect_to "$(_tmux_normalize_session_name "$1")"
+else
+  exit 1
+fi
