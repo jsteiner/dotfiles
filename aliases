@@ -16,7 +16,7 @@ alias s="rspec"
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # git
-alias git='hub'
+alias g='hub'
 alias amend='git commit --amend'
 alias amendne='git commit --amend --no-edit'
 alias ga='git add'
