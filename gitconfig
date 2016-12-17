@@ -15,6 +15,7 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
+  pager = diff-so-fancy | less -R --tabs=1,5
 [merge]
   ff = only
 [commit]
