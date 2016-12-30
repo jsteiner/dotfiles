@@ -39,6 +39,13 @@ brew 'phantomjs'
 
 brew 'zsh'
 
+# Quicklook plugins https://github.com/sindresorhus/quick-look-plugins
+cask 'qlmarkdown' # quick look for markdown
+cask 'quicklook-json' # quick look for json
+cask 'betterzipql' # peek inside zip files
+cask 'qlstephen' # quick look plain text files with no extension
+cask 'qlcolorcode' # syntax highlight code
+
 if ENV.fetch("SHELL", "") != "/usr/local/bin/zsh"
   puts "To use the Homebrew-installed ZSH:"
   puts "  sudo echo /usr/local/bin/zsh >> /etc/shells"
