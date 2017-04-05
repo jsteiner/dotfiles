@@ -144,6 +144,9 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
+set secure                        " Don't local vimrc files do scary shit
+set exrc                          " Load local vimrc if found
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
