@@ -29,13 +29,13 @@ _git_status() {
 _git_prompt_color() {
   if [ -n "$1" ]; then
     current_git_status=$(_git_status)
-    if [ "changed" = $current_git_status ]; then
+    if [ "changed" == "$current_git_status" ]; then
       echo "$(_red $1)"
-    elif [ "pending" = $current_git_status ]; then
+    elif [ "pending" == "$current_git_status" ]; then
       echo "$(_yellow $1)"
-    elif [ "unchanged" = $current_git_status ]; then
+    elif [ "unchanged" == "$current_git_status" ]; then
       echo "$(_green $1)"
-    elif [ "untracked" = $current_git_status ]; then
+    elif [ "untracked" == "$current_git_status" ]; then
       echo "$(_cyan $1)"
     fi
   else
