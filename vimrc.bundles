@@ -59,6 +59,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
+Plug 'sbdchd/neoformat'
 
 
 if filereadable(expand("~/.vimrc.bundles.local"))
