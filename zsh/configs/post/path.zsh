@@ -6,6 +6,11 @@ if command -v rbenv >/dev/null; then
   eval "$(rbenv init - --no-rehash)"
 fi
 
+# add global yarn installs to the path
+if command -v yarn >/dev/null; then
+  PATH="$(yarn global bin):$PATH"
+fi
+
 # mkdir .git/safe in the root of repositories you trust
 PATH=".git/safe/../../bin:.git/safe/../../node_modules/.bin:$PATH"
 
