@@ -7,6 +7,6 @@ if command -v rbenv >/dev/null; then
 fi
 
 # mkdir .git/safe in the root of repositories you trust
-PATH=".git/safe/../../bin:$PATH"
+PATH=".git/safe/../../bin:.git/safe/../../node_modules/.bin:$PATH"
 
 export -U PATH
