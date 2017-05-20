@@ -12,6 +12,6 @@ if command -v yarn >/dev/null; then
 fi
 
 # mkdir .git/safe in the root of repositories you trust
-PATH=".git/safe/../../bin:.git/safe/../../node_modules/.bin:$PATH"
+PATH=".git/safe/../../bin:.git/safe/../../node_modules/.bin:.git/safe/../../assets/node_modules/.bin:$PATH"
 
 export -U PATH
