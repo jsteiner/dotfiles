@@ -39,6 +39,10 @@ Plug 'mattn/gist-vim'
 Plug 'sbdchd/neoformat'
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'wokalski/autocomplete-flow'
+" For func argument completion
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 
 
 if filereadable(expand("~/.vimrc.bundles.local"))

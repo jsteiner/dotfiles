@@ -6,3 +6,6 @@ let g:deoplete#file#enable_buffer_path = 1
 
 " use tab to forward cycle
 inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" don't open the preview window
+set completeopt-=preview
