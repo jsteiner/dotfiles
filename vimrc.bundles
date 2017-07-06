@@ -38,6 +38,7 @@ Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 Plug 'sbdchd/neoformat'
 Plug 'w0rp/ale'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 
 if filereadable(expand("~/.vimrc.bundles.local"))
