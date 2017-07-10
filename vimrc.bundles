@@ -44,6 +44,10 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'slashmili/alchemist.vim'
 
+" Distraction-free writing
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
