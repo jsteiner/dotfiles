@@ -1,4 +1,5 @@
 # load custom executable functions
+#
 for function in ~/.zsh/functions/*; do
   source $function
 done
@@ -44,5 +45,3 @@ _load_settings "$HOME/.zsh/configs"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
-export PATH="$HOME/.yarn/bin:$PATH"
