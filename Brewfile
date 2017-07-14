@@ -15,8 +15,8 @@ brew 'diff-so-fancy'
 # a better ack/grep
 brew 'the_silver_searcher'
 
-# Vim!
-brew 'vim'
+# Neovim!
+brew 'neovim/neovim/neovim'
 
 # Syntax highlighting...for ZSH!
 brew 'zsh-syntax-highlighting'
