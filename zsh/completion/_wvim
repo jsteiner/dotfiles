@@ -1,0 +1,3 @@
+#compdef wvim
+
+compdef wvim=which
