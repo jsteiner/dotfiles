@@ -15,6 +15,10 @@ brew 'diff-so-fancy'
 # a better ack/grep
 brew 'the_silver_searcher'
 
+# For tmux
+brew 'tmux'
+brew 'reattach-to-user-namespace'
+
 # Neovim!
 brew 'neovim/neovim/neovim'
 
@@ -38,6 +42,10 @@ brew 'rcm'
 brew 'phantomjs'
 
 brew 'zsh'
+
+# For Ruby
+brew 'rbenv'
+brew 'ruby-build'
 
 # Quicklook plugins https://github.com/sindresorhus/quick-look-plugins
 cask 'qlmarkdown' # quick look for markdown
