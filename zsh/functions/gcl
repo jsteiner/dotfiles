@@ -1,0 +1,4 @@
+gcl () {
+  local directory="$(superclone "$@")"
+  cd "$directory"
+}
