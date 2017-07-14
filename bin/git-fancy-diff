@@ -1,0 +1,12 @@
+#!/bin/sh
+# Print an easier to read git diff using diff-so-fancy.
+# Falls back to git diff if the command is not available.
+# https://github.com/so-fancy/diff-so-fancy
+
+set -e
+
+if command -v diff-so-fancy > /dev/null; then
+  git diff --color $1 | diff-so-fancy
+else
+  git diff
+fi
