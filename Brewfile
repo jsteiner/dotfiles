@@ -20,7 +20,8 @@ brew 'tmux'
 brew 'reattach-to-user-namespace'
 
 # Neovim!
-brew 'neovim/neovim/neovim'
+brew 'python3'
+brew 'neovim'
 
 # Syntax highlighting...for ZSH!
 brew 'zsh-syntax-highlighting'
