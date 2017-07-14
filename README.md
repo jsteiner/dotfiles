@@ -1,18 +1,14 @@
 # dotfiles
 
-![prompt](http://images.thoughtbot.com/thoughtbot-dotfiles-prompt.png)
-
 ## Installation
 
     $ git clone git://github.com/jsteiner/dotfiles.git ~/dotfiles
     $ cd ~/dotfiles
     $ ./install.sh
 
-To update, pull down changes with `git` and run `rcup` to update:
+To update:
 
-    $ cd ~/dotfiles
-    $ git pull
-    $ rcup
+    $ updaterc
 
 ## Customizations
 
