@@ -1,4 +1,7 @@
-source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
+OLD_PATH=/usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
+NEW_PATH=/usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+test -s "$OLD_PATH"&& source "$OLD_PATH"
+test -s "$NEW_PATH"&& source "$NEW_PATH"
 
 # bind UP and DOWN arrow keys
 for keycode in '[' '0'; do
