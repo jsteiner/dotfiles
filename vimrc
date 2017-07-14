@@ -11,6 +11,9 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set clipboard=unnamed " use system clipboard
+set autoread " Don't ask me if I want to load changed files. The answer is always 'Yes'
+set visualbell " No sounds
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -53,7 +56,7 @@ let g:is_posix = 1
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
-set shiftround
+set shiftround " When at 3 spaces and I hit >>, go to 4, not 5.
 set expandtab
 
 " Display extra whitespace
@@ -61,6 +64,20 @@ set list listchars=tab:»·,trail:·,nbsp:·
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" Formatting
+""""""""""""
+
+" Reindent file and return to current line
+map <leader>i mmgg=G`m<cr>
+" Rehash with 1.9 style hash syntax
+nmap <leader>rh :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
+" delete ruby comments
+nmap <leader>c :%s/^\s*#.*$//g<CR>:%s/\(\n\)\n\+/\1/g<CR>:nohl<CR>gg
+
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -111,12 +128,21 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+" Make j and k move through wrapped lines
+nmap j gj
+nmap k gk
+
 " vim-test mappings
 nnoremap <silent> <Leader>t :TestFile<CR>
 nnoremap <silent> <Leader>s :TestNearest<CR>
 nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <leader>gt :TestVisit<CR>
+
+let test#strategy = "tslime"
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
+map <leader>tv <Plug>SetTmuxVars
 
 " Run the current file in another tmux pane
 nnoremap <leader>r :call Send_to_Tmux("./" . @% . "\n")<CR>
@@ -128,11 +154,28 @@ let g:html_indent_tags = 'li\|p'
 set splitbelow
 set splitright
 
+" Scrolling
+set scrolloff=8   "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" Edit another file in the same directory as the current file
+" uses expression to extract path from current file's path
+map <Leader>oe :e <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>os :split <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>ov :vsplit <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>ot :tabe <C-R>=expand("%:p:h") . '/'<CR>
+
+" I never want :W or :Q and it's too easy to keep holding shift
+command! W w
+command! Q q
+
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
