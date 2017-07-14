@@ -2,11 +2,27 @@
 
 ## Installation
 
+Install and use [iTerm2](http://www.iterm2.com/).
+
     $ git clone git://github.com/jsteiner/dotfiles.git ~/dotfiles
     $ cd ~/dotfiles
     $ ./install.sh
 
-To update:
+Configure iTerm:
+
+* Install the [light] and [dark] Solarized for iTerm2 themes.
+  * Set them in Profiles > Colors > Load Presets
+* Under Profiles > Terminal
+  * Set `Scrollback Lines` to 0 *if* you are using tmux.
+* Under Profiles > Text
+  * Disable `Draw bold text in bright colors`
+  * Install [Inconsolata] and set font size to 16
+
+[dark]: https://raw.githubusercontent.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors
+[light]: https://raw.githubusercontent.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Light.itermcolors
+[Inconsolata]: https://fonts.google.com/specimen/Inconsolata
+
+## Updating
 
     $ updaterc
 
