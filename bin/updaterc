@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Stolen from https://github.com/derekprior/dotfiles/blob/master/bin/updaterc
+
+set -ex
+
+pushd ~/dotfiles
+git pull
+popd
+
+rcup
