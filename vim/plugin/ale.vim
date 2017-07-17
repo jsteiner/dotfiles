@@ -1,3 +1,5 @@
 let g:ale_linters = {
 \   'ruby': ['ruby', 'rubocop', 'reek', 'rails_best_practices'],
 \}
+
+let g:ale_echo_msg_format = '[%linter%]: %s'
