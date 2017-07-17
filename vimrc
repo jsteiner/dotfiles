@@ -1,3 +1,9 @@
+function! g:Include(file)
+  if filereadable(expand(a:file))
+    execute 'source' a:file
+  endif
+endfunction
+
 " Leader
 let mapleader = " "
 
@@ -21,9 +27,7 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
+call Include("~/.vimrc.bundles")
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
@@ -187,10 +191,8 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
-set secure                        " Don't local vimrc files do scary shit
-set exrc                          " Load local vimrc if found
+" Source local vimrc if we're in a safe repo
+call Include('./.git/safe/../../.vimrc')
 
 " Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
+call Include("~/.vimrc.local")
