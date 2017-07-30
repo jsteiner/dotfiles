@@ -120,3 +120,7 @@ regardless of the file name:
     # Indent C programs according to BSD style(9)
     set cinoptions=:0,t0,+4,(4
     autocmd BufNewFile,BufRead *.[ch] setlocal sw=0 ts=8 noet
+
+On startup, `~/.vimrc` (and `~/.vimrc.local`) gets executed before `vim/plugin`.
+To run commands after plugins are loaded, you can create a
+`~/.vimrc.after.local`.
