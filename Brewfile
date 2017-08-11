@@ -31,6 +31,7 @@ brew 'zsh-history-substring-search'
 
 # Fast GitHub client
 brew 'hub'
+brew 'git', args: ['without-completions']
 
 # Fuzzy finder
 brew 'fzf'
