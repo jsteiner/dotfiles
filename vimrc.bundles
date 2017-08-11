@@ -6,7 +6,7 @@ call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
 Plug '/usr/local/opt/fzf'
-Plug 'bogado/file-line'
+Plug 'kopischke/vim-fetch'
 Plug 'christoomey/vim-run-interactive'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
