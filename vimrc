@@ -143,14 +143,6 @@ nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <leader>gt :TestVisit<CR>
 
-let test#strategy = "tslime"
-let g:tslime_always_current_session = 1
-let g:tslime_always_current_window = 1
-map <leader>tv <Plug>SetTmuxVars
-
-" Run the current file in another tmux pane
-nnoremap <leader>r :call Send_to_Tmux("./" . @% . "\n")<CR>
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
