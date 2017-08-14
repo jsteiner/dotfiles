@@ -3,3 +3,6 @@ let g:ale_linters = {
 \}
 
 let g:ale_echo_msg_format = '[%linter%]: %s'
+
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
