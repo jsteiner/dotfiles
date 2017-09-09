@@ -45,10 +45,6 @@ brew 'phantomjs'
 
 brew 'zsh'
 
-# For Ruby
-brew 'rbenv'
-brew 'ruby-build'
-
 # Quicklook plugins https://github.com/sindresorhus/quick-look-plugins
 cask 'qlmarkdown' # quick look for markdown
 cask 'quicklook-json' # quick look for json

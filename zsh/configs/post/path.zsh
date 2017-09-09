@@ -1,11 +1,6 @@
 # ensure dotfiles bin directory is loaded first
 PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 
-# load rbenv if available
-if command -v rbenv >/dev/null; then
-  eval "$(rbenv init - --no-rehash)"
-fi
-
 # add global yarn installs to the path
 if command -v yarn >/dev/null; then
   PATH="$(yarn global bin):$PATH"
