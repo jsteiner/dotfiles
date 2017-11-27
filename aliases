@@ -56,5 +56,9 @@ alias ae='vim ~/.aliases.local'
 alias ar='source ~/.aliases.local'
 alias zr='source ~/.zshrc'
 
+# Utils
+alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
