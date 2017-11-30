@@ -43,6 +43,7 @@ Plug 'wokalski/autocomplete-flow'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'slashmili/alchemist.vim'
+Plug 'triglav/vim-visual-increment'
 
 " Distraction-free writing
 Plug 'junegunn/goyo.vim'
