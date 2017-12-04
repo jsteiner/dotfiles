@@ -14,6 +14,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
+\   'typescript': ['eslint', 'tslint'],
 \}
 
 let g:ale_echo_msg_format = '[%linter%]: %s'
