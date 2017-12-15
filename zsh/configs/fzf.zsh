@@ -1,3 +1,3 @@
 _fzf_compgen_path() {
-  ag --hidden --ignore .git -g ""
+  rg --files --no-ignore --hidden --follow --glob "!.git/*"
 }
