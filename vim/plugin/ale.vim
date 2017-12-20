@@ -1,14 +1,5 @@
-call ale#linter#Define('eruby', {
-  \   'name': 'erubylint',
-  \   'executable': 'erb',
-  \   'output_stream': 'stderr',
-  \   'command': "ruby -rerb -e \"puts ERB.new(File.read(%t, encoding: 'BINARY').gsub('<%=','<%'), nil, '-').src\" | ruby -c",
-  \   'callback': 'ale#handlers#ruby#HandleSyntaxErrors',
-  \})
-
 let g:ale_linters = {
 \   'ruby': ['ruby', 'reek', 'rails_best_practices'],
-\   'eruby': ['erubylint'],
 \}
 
 let g:ale_fixers = {
