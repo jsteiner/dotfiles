@@ -23,6 +23,8 @@ if is_osx; then
   vim +UpdateRemovePlugins
 fi
 
+touch ~/.fasd
+
 echo "Linking dotfiles into ~..."
 # Before `rcup` runs, there is no ~/.rcrc, so we must tell `rcup` where to look.
 RCRC=rcrc rcup -v -d .

@@ -6,9 +6,6 @@ tap 'homebrew/services'
 # sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
 brew 'jq'
 
-# Excuberant Ctags
-brew 'ctags'
-
 # Fancier git diffs
 brew 'diff-so-fancy'
 
@@ -45,10 +42,12 @@ brew 'phantomjs'
 
 brew 'zsh'
 
+# Better navigation
+brew 'fasd'
+
 # Quicklook plugins https://github.com/sindresorhus/quick-look-plugins
 cask 'qlmarkdown' # quick look for markdown
 cask 'quicklook-json' # quick look for json
-cask 'betterzipql' # peek inside zip files
 cask 'qlstephen' # quick look plain text files with no extension
 cask 'qlcolorcode' # syntax highlight code
 
