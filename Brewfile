@@ -39,8 +39,10 @@ brew 'rcm'
 
 # For Hound/poltergeist
 brew 'phantomjs'
+brew 'chromedriver'
 
 brew 'zsh'
+brew 'tree'
 
 # Better navigation
 brew 'fasd'
