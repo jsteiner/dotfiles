@@ -22,15 +22,25 @@ class ClosesPullRequests
     ensure_working_dir_and_index_clean
     fetch_origin
     ensure_feature_branch_in_sync
-    ensure_master_in_sync
     checkout_master
     merge_local_banch
     push_master
     delete_remote_branch
     delete_local_branch
+    open_heroku_activity_dashboard
   end
 
   private
+
+  def open_heroku_activity_dashboard
+    gc = GitCall.new("git config --get remote.production.url", :query, "https://foo.com/")
+    remote_url = run_or_print(gc)
+    if remote_url.include?("git.heroku.com")
+      dashboard_url = remote_url.split("/").last.split(".").first
+      open_gc = GitCall.new("open https://dashboard.heroku.com/apps/#{dashboard_url}/activity", :command, true)
+      run_or_print(open_gc)
+    end
+  end
 
   def die_with_msg(msg)
     puts " -> \e[31m#{msg}\e[0m"
@@ -46,7 +56,7 @@ class ClosesPullRequests
     if has_ci_enabled?
       puts 'Confirming ci-status on PR is green...'
       if force?
-        puts "  --force ignroing CI"
+        puts "  --force ignoring CI"
       elsif !run_or_print(gc)
         die_with_msg '  CI status is not green for the PR. Aborting'
       end
@@ -60,6 +70,9 @@ class ClosesPullRequests
     current_branch_cmd = 'git rev-parse --abbrev-ref HEAD'
     gc = GitCall.new(current_branch_cmd, :query, 'my-feature-branch')
     @current_branch = run_or_print(gc)
+    if @current_branch == "master"
+      exit
+    end
   end
 
   def confirm_upstream_tracking_branch
@@ -98,12 +111,19 @@ class ClosesPullRequests
     run_or_print(gc)
   end
 
-  def ensure_master_in_sync
-    ensure_branch_in_sync_with_upstream('master', 'master')
-  end
-
   def ensure_feature_branch_in_sync
     ensure_branch_in_sync_with_upstream(@current_branch, @upstream_branch)
+    ensure_branch_ahead_of("origin/master", @current_branch)
+    ensure_branch_ahead_of("master", @current_branch)
+  end
+
+  def ensure_branch_ahead_of(ancestor, decendant)
+    command = "git merge-base --is-ancestor #{ancestor} #{decendant}"
+    gc = GitCall.new(command, :command, true)
+
+    unless run_or_print(gc)
+      die_with_msg "Branch '#{@current_branch}' is not fast-forwardable"
+    end
   end
 
   def ensure_branch_in_sync_with_upstream(branch, upstream)
