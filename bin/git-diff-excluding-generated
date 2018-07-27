@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+git diff $1 -- . ':(exclude,top)client/src/data/schema.json'
