@@ -14,7 +14,6 @@ brew 'the_silver_searcher'
 
 # For tmux
 brew 'tmux'
-brew 'reattach-to-user-namespace'
 
 # Neovim!
 brew 'python3'
