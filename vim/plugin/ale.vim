@@ -14,8 +14,10 @@ let g:ale_javascript_prettier_use_local_config = 1
 
 let g:ale_fix_on_save = 1
 
+let g:ale_pattern_options_enabled = 1
 let g:ale_pattern_options = {
-\   '.*node_modules*$': {'ale_enabled': 0},
+\   '.*__generated__.*$': {'ale_linters': [], 'ale_fixers': []},
+\   '.*node_modules.*$': {'ale_linters': [], 'ale_fixers': []},
 \}
 
 nnoremap ]r :ALENextWrap<CR>
