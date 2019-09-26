@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [[ -n "$1" ]]; then
+  git checkout "$1"
+else
+  branch=$(select-git-branch)
+  if [[ -n "$branch" ]]; then
+    git checkout "$branch"
+  fi
+fi
