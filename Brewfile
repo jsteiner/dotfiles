@@ -27,7 +27,7 @@ brew 'zsh-history-substring-search'
 
 # Fast GitHub client
 brew 'hub'
-brew 'git', args: ['without-completions']
+brew 'git' #, args: ['without-completions']
 
 # Fuzzy finder
 brew 'fzf'
@@ -37,8 +37,8 @@ tap 'thoughtbot/formulae'
 brew 'rcm'
 
 # For Hound/poltergeist
-brew 'phantomjs'
-brew 'chromedriver'
+# brew 'phantomjs'
+# brew 'chromedriver'
 
 brew 'zsh'
 brew 'tree'

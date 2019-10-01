@@ -37,6 +37,14 @@
   compactionHeuristic = true
 [rebase]
   autosquash = true
+[user]
+  name = Josh Steiner
+  email = josh@jsteiner.me
+[github]
+  user = jsteiner
+[url "git@github.com:jsteiner/"]
+  # moi, with write access
+  insteadOf = js:
 [include]
   path = ~/.gitconfig.local
 [branch]
