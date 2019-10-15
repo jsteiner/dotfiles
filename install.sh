@@ -19,7 +19,6 @@ if is_osx; then
   # installing neovim deoplete support
   # https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim#simple-setup
   pip3 install --user neovim
-  vim +UpdateRemovePlugins
 fi
 
 touch ~/.fasd
