@@ -36,10 +36,6 @@ brew 'fzf'
 tap 'thoughtbot/formulae'
 brew 'rcm'
 
-# For Hound/poltergeist
-# brew 'phantomjs'
-# brew 'chromedriver'
-
 brew 'zsh'
 brew 'tree'
 
