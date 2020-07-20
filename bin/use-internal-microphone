@@ -4,4 +4,4 @@ set -e
 
 # brew install switchaudio-osx
 
-SwitchAudioSource -t input -s "Built-in Microphone"
+SwitchAudioSource -t input -s "MacBook Pro Microphone"
