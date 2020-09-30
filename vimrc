@@ -21,6 +21,10 @@ set clipboard=unnamed " use system clipboard
 set autoread " Don't ask me if I want to load changed files. The answer is always 'Yes'
 set visualbell " No sounds
 
+" set titlestring for talon
+let &titlestring ='VIM MODE:%{mode()} RPC:%{v:servername} - (%f) %t'
+set title
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
