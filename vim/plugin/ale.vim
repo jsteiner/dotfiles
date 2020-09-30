@@ -1,10 +1,9 @@
 let g:ale_linters = {
 \   'ruby': ['rubocop', 'reek', 'rails_best_practices'],
+\   'javascript': ['flow', 'eslint'],
 \}
 
 let g:ale_fixers = {
-\   'css': ['prettier'],
-\   'scss': ['prettier'],
 \   'elixir': ['mix_format'],
 \   'typescript': ['eslint', 'tslint'],
 \}
