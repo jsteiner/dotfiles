@@ -11,5 +11,7 @@ fi
 
 # mkdir .git/safe in the root of repositories you trust
 PATH=".git/safe/../../bin:.git/safe/../../node_modules/.bin:.git/safe/../../assets/node_modules/.bin:$PATH"
+# PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+PATH="/Applications/Postgres.app/Contents/Versions/11/bin:$PATH"
 
 export -U PATH
