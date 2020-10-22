@@ -15,7 +15,6 @@ Plug 'janko-m/vim-test'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'junegunn/fzf.vim'
-Plug 'epmatsw/ag.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'pbrisbin/vim-rename-file'
@@ -60,7 +59,6 @@ Plug 'Quramy/tsuquyomi'
 " Distraction-free writing
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
