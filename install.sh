@@ -15,10 +15,6 @@ if is_osx; then
   # make homebrew installed zsh the primary zsh version
   sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
   chsh -s /usr/local/bin/zsh
-
-  # installing neovim deoplete support
-  # https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim#simple-setup
-  pip3 install --user neovim
 fi
 
 touch ~/.fasd

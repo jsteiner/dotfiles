@@ -1,0 +1,49 @@
+{
+  "coc.preferences.jumpCommand": "drop",
+  "coc.preferences.hoverTarget": "float",
+  "diagnostic.refreshOnInsertMode": true,
+  "suggest.floatEnable": true,
+  "suggest.noselect": false,
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+  "suggest.enablePreview": true,
+  "suggest.enablePreselect": true,
+  "diagnostic.errorSign": "!!",
+  "diagnostic.warningSign": "!!",
+  "diagnostic.infoSign": "!!",
+  "diagnostic.hintSign": "!!",
+  "diagnostic.signOffset": 999999,
+  "diagnostic.maxWindowHeight": 20,
+  "signature.maxWindowHeight": 20,
+  "diagnostic.checkCurrentLine": true,
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "Markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "ruby",
+    "json"
+  ],
+  "prettier.requireConfig": false,
+  "eslint.autoFixOnSave": true,
+  "html.format.enable": true,
+  "tsserver.formatOnType": true,
+  "tsserver.enableJavascript": false,
+  "coc.preferences.formatOnType": true,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
+  "languageserver": {
+    "flow": {
+      "command": "flow",
+      "args": ["lsp"],
+      "filetypes": ["javascript", "javascriptreact"],
+      "initializationOptions": {},
+      "requireRootPattern": true,
+      "settings": {},
+      "rootPatterns": [".flowconfig"]
+    }
+  }
+}
