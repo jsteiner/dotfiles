@@ -45,5 +45,6 @@
       "settings": {},
       "rootPatterns": [".flowconfig"]
     }
-  }
+  },
+  "snippets.userSnippetsDirectory": "~/.vim/snippets"
 }

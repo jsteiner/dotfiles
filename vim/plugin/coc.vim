@@ -10,11 +10,17 @@ endfunction
 " inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [r <Plug>(coc-diagnostic-prev)
@@ -90,7 +96,7 @@ nnoremap <silent> <space>c :<C-u>CocList commands<cr>
 " Find symbol of current document
 nnoremap <silent> <space>o :<C-u>CocList outline<cr>
 " Search workspace symbols
-nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>y :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 nnoremap <silent> <space>j :<C-u>CocNext<CR>
 " Do default action for previous item.
