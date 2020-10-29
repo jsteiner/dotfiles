@@ -32,7 +32,7 @@ let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 
 " only search file contents
 " https://github.com/junegunn/fzf.vim/issues/714#issuecomment-428802659
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
 
 " search for the word under the cursor
 
