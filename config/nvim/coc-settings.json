@@ -7,10 +7,10 @@
   "suggest.acceptSuggestionOnCommitCharacter": true,
   "suggest.enablePreview": true,
   "suggest.enablePreselect": true,
-  "diagnostic.errorSign": "!!",
-  "diagnostic.warningSign": "!!",
-  "diagnostic.infoSign": "!!",
-  "diagnostic.hintSign": "!!",
+  "diagnostic.errorSign": "!e",
+  "diagnostic.warningSign": "!w",
+  "diagnostic.infoSign": "!i",
+  "diagnostic.hintSign": "!h",
   "diagnostic.signOffset": 999999,
   "diagnostic.maxWindowHeight": 20,
   "signature.maxWindowHeight": 20,
@@ -46,5 +46,5 @@
       "rootPatterns": [".flowconfig"]
     }
   },
-  "snippets.userSnippetsDirectory": "~/.vim/snippets"
+  "snippets.userSnippetsDirectory": "~/.vim/ultisnips"
 }
