@@ -15,6 +15,10 @@ if is_osx; then
   # make homebrew installed zsh the primary zsh version
   sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
   chsh -s /usr/local/bin/zsh
+
+  echo "Installing tmux plugin manager"
+  echo "https://github.com/tmux-plugins/tpm"
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
 touch ~/.fasd
