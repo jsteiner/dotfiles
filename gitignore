@@ -12,3 +12,4 @@ tmp/**/*
 !tmp/cache/.keep
 *.pyc
 .stack-work
+Session.vim
