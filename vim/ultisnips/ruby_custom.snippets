@@ -9,3 +9,23 @@ endsnippet
 snippet rll "Rails.logger"
 Rails.logger.${0:info} $0
 endsnippet
+
+snippet atr "allow to receive"
+allow($1).to receive(:${2:call})
+endsnippet
+
+snippet atrw "allow to receive with"
+allow($1).to receive(:${2:call}).with($3)
+endsnippet
+
+snippet etr "expect to have received"
+expect($1).to have_received(:${2:call})
+endsnippet
+
+snippet entr "expect not to have received"
+expect($1).not_to have_received(:${2:call})
+endsnippet
+
+snippet etrw "expect to have received with"
+expect($1).to have_received(:${2:call}).with($3)
+endsnippet
