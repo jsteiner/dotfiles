@@ -162,6 +162,8 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
+set pyx=3
+
 " Source local vimrc if we're in a safe repo
 call Include('./.git/safe/../../.vimrc')
 

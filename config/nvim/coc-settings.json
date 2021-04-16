@@ -25,6 +25,7 @@
     "typescript",
     "typescriptreact",
     "ruby",
+    "elixir",
     "json"
   ],
   "prettier.requireConfig": false,
@@ -46,5 +47,6 @@
       "rootPatterns": [".flowconfig"]
     }
   },
-  "snippets.userSnippetsDirectory": "~/.vim/ultisnips"
+  "snippets.userSnippetsDirectory": "~/.vim/ultisnips",
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh"
 }
