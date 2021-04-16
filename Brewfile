@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # vim: syntax=ruby filetype=ruby
 
 # Lets us do `brew services restart postgres`, etc
@@ -27,7 +29,7 @@ brew 'zsh-history-substring-search'
 
 # Fast GitHub client
 brew 'hub'
-brew 'git' #, args: ['without-completions']
+brew 'git' # , args: ['without-completions']
 
 # Fuzzy finder
 brew 'fzf'
@@ -42,14 +44,11 @@ brew 'tree'
 # Better navigation
 brew 'fasd'
 
-# Quicklook plugins https://github.com/sindresorhus/quick-look-plugins
-cask 'qlmarkdown' # quick look for markdown
-cask 'quicklook-json' # quick look for json
-cask 'qlstephen' # quick look plain text files with no extension
-cask 'qlcolorcode' # syntax highlight code
+cask 'meetingbar'
+cask 'rectangle'
 
-if ENV.fetch("SHELL", "") != "/usr/local/bin/zsh"
-  puts "To use the Homebrew-installed ZSH:"
-  puts "  sudo echo /usr/local/bin/zsh >> /etc/shells"
-  puts "  chsh -s /usr/local/bin/zsh"
+if ENV.fetch('SHELL', '') != '/usr/local/bin/zsh'
+  puts 'To use the Homebrew-installed ZSH:'
+  puts '  sudo echo /usr/local/bin/zsh >> /etc/shells'
+  puts '  chsh -s /usr/local/bin/zsh'
 end
